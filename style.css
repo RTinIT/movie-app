@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background:rgb(50, 5, 112);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 100px;
+    background:rgb(50, 5, 112);
+    border-bottom: 2px solid gold;
+    margin-bottom: 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+    margin-left: 100px;
+    flex: 1;
+}
+
+.logo a {
+    display: block;
+    text-decoration: none;
+    color: gold;
+    font-size: 28px;
+}
+
+.search {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    flex: 2;
+}
+
+.input {
+    width: 500px;
+    height: 32px;
+    color: black;
+    font-size: 22px;
+    border-right: 0;
+    border-left: 2px solid gold;
+    border-top: 2px solid gold;
+    border-bottom: 2px solid gold;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+.search-btn {
+    width: 32px;
+    height: 32px;
+    border-left: 0;
+    border-right: 2px solid gold;
+    border-top: 2px solid gold;
+    border-bottom: 2px solid gold;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-image: url('./assets/svg/search-icon.svg');
+    cursor: pointer;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background: rgb(50, 5, 112);
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 90%;
+    position: relative;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 630px;
+    background-color: black;
+    position: relative;
+    transition: 0.3s;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.poster {
+    width: 400px;
+    height: 500px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.category {
+    color: white;
+    font-size: 14px;
+    margin: 5px 0;
+    width: 400px;
+    height: 30px;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: break-word;
+
+}
+
+.year {
+    color: white;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+    background: black;
+    color:white;
+    font-size: 12px;
+    border-radius: 50%; 
+}
+
+.green {
+    border: 3px solid green;
+}
+
+.orange {
+    border: 3px solid orange;
+}
+
+.red {
+    border: 3px solid red;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    background: black;
+    border-top: 10px solid rgb(50, 5, 112);
+
+}
+
+.gh-logo {
+    border-radius: 50%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    color: white;
+}
+
+.footer-container li {
+    list-style: none;
+}
+
+.active {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    transition: 0.7s;
+    z-index: 99;
+
+}
