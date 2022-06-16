@@ -13,24 +13,29 @@ async function getData(url) {
             "Content-Type": "application/json",
             "X-API-KEY": apiKey
         }
-    })
+    });
+
     const data = await response.json();
+
     showCard(data);
-    const card = document.querySelectorAll('.card')
+
+    const card = document.querySelectorAll('.card');
     card.forEach((elem) => elem.addEventListener('click', () => {
-        elem.classList.toggle('active')
-    }))
+        elem.classList.toggle('active');
+    }));
+
     changeColorRaiting(data);
-}
+};
 
 getData(defaultPageUrl);
 
 function showCard(data) {
-    const cards = document.querySelector('.cards');
 
+    const cards = document.querySelector('.cards');
     cards.innerHTML = '';
 
     data.films.forEach(elem => {
+
         const movieCard = document.createElement('div');
         movieCard.classList.add('card');
         movieCard.innerHTML = 
@@ -39,49 +44,61 @@ function showCard(data) {
         <div class="title">${checkTitle(elem)}</div>
         <div class="category">${elem.genres.map((genre, i) => genre.genre)}</div>
         <div class="year">${checkYear(elem)}</div>`;
+
         cards.append(movieCard);
-  
     });
-}
+};
 
 function checkRating(value) {
+    
     if (value != 'null') {
-        return value
+        return value;
+
     } else {
         return value = '';
     }
-}
+};
 
 function checkTitle(value) {
+
     if (!value.nameRu) {
-        return value.nameEn
+        return value.nameEn;
+
     } else {
-        return value.nameRu
+        return value.nameRu;
     }
-}
+};
 
 function checkYear(value) {
+
     if (value.year == 'null') {
-        return ''
+        return '';
+
     } else {
-        return value.year
+        return value.year;
     }
-}
+};
 
 function changeColorRaiting(value) {
+
     if (value >= 7) {
-        return 'green'
+        return 'green';
+
     } else if (value > 5 && value < 7) {
-        return 'orange'
+        return 'orange';
+
     } else {
-        return 'red'
+        return 'red';
     }
-}
+};
 
 form.addEventListener('submit', (elem) => {
+
     elem.preventDefault();
+
     const searchMovie = `${searchUrl}${input.value}`;
+
     if (input.value) {
         getData(searchMovie);
     }
-})
+});
