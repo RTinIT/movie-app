@@ -21,7 +21,6 @@ async function getData(url) {
         elem.classList.toggle('active')
     }))
     changeColorRaiting(data);
-    console.log(data);
 }
 
 getData(defaultPageUrl);
@@ -86,7 +85,3 @@ form.addEventListener('submit', (elem) => {
         getData(searchMovie);
     }
 })
-
-function getActive() {
-
-}
